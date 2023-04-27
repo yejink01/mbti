@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       const originalText = completions.data.choices[0].text.trim().replace(/\n/g, "");
       console.log(originalText);
 
-      const mbti = JSON.parse(originalText);
+      const mbti = JSON.parse(originalText)
 
       // 결과를 클라이언트로 반환
       res.status(200).json({
